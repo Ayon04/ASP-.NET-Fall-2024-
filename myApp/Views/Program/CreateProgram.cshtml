@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "CreateProgram";
+}
+
+<h2>CreateProgram</h2>
+
+@Html.ValidationSummary()
+<form method="post">
+
+
+    <input readonly class="form-control" type="text" name="ChannelId" value="@Model.ChannelId" /><br>
+
+    <input type="text" class="form-control" value="@Model.ProgramName" name="ProgramName" placeholder="Program Name" /><br>
+
+    <input type="text" class="form-control" value="@Model.TRPScore" name="TRPScore" placeholder="TRP Score" /><br>
+
+    <input type="time" class="form-control" value="@Model.AirTime.ToString("HH:mm:ss")" name="AirTime" placeholder="Air Time" /><br>
+
+    <input type="submit" class="btn btn-success" value="Add Program" />
+</form>

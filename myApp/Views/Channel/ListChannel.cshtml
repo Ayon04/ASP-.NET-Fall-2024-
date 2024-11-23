@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ListChannel";
+}
+
+<h2>ListChannel</h2>
+﻿
+<a href="/Channel/CreateChannel">Create</a>
+<table class="table table-bordered">
+    <tr>
+        <th> Channel Id</th>
+        <th>Channel Name</th>
+        <th>Established Year</th>
+        <th>Country</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ChannelId</td>
+            <td>@item.ChannelName</td>
+            <td>@item.EstablishedYear</td>
+            <td>@item.Country</td>
+            <td>
+                <a class="btn btn-primary" href="/Channel/Details/@item.ChannelId">Details</a>
+                <a class="btn btn-warning" href="/Channel/EditChannel/@item.ChannelId">Edit</a>
+                <a class="btn btn-danger" href="/Channel/DeleteChannel/@item.ChannelId">Delete</a>
+                <a class="btn btn-success" href="/Program/CreateProgram/@item.ChannelId">Add Program</a>
+
+            </td>
+        </tr>
+    }
+</table>
+

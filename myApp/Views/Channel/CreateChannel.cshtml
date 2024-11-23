@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "CreateChannel";
+}
+
+<h2>CreateChannel</h2>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+<form method="post">
+    <input type="text" class="form-control" value="@Model.ChannelName" name="ChannelName" placeholder="Channel Name" /><br>
+
+    <input type="text" class="form-control" value="@Model.EstablishedYear" name="EstablishedYear" placeholder="Established Year" /><br>
+
+    <input type="text" class="form-control" value="@Model.Country" name="Country" placeholder="Country" /><br>
+
+
+    <input type="submit" class="btn btn-success" value="Create" />
+</form>
+
+
